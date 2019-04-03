@@ -1,0 +1,88 @@
+Floppy-Symphonie (c't Hacks 1/14) 
+
+Für die Moppy-Software muss auf Ihrem Rechner Java installiert sein:
+http://java.com/de/download/index.jsp
+
+Zusätzlich benötigen Sie die Bibliothek RXTX:
+
+In unserem Archiv finden Sie die jeweiligen Versionen für die Betriebssysteme
+Windows, Linux und MacOS. Bitte achten Sie darauf, dass der Java-Aufruf mit Administratorrechten erfolgen muss. Dazu öffnen Sie in Windows unten links
+Start>Alle Programme>Zubehör>Eingabeaufforderung mit der rechten Maustaste und wählen 
+anstatt "Als Administrator ausführen". 
+
+Die Moppy-Software wird später mit dem Befehl "java -jar MoppyDesk.jar" ebenfalls
+mit Administratorrechten ausgeführt.
+
+Anbei folgt eine kurze Anleitung wie Sie die RXTX-Bibliothek auf verschiedenen Systemen installieren:
+
+
+Windows:
+========
+
+Mit dem Befehl "java -version" lässt sich die momentan aktive Java VM ermitteln.
+Neben der Versionsnummer lässt sich dabei auch ermitteln, ob es sich um eine 64-Bit-Anwendung handelt. 
+
+Java 32-Bit-Version (Windows):
+==============================
+
+Die notwendigen Treiber finden Sie im Ordner Win32.
+
+Schritt 1)
+Im Ordner Treiber\Win32 finden Sie die Dateien RXTXcomm.jar und rxtxSerial.dll. Die Datei RXTXcomm.jar kopieren in den Ordner "C:\Programme\Java\j2re-Version\lib\ext". Der Platzhalter "j2re-Version" steht für die Java-Version, welche ihnen mit "java -version"
+angezeigt wird. Mit einer aktuellen Java7-Version sollte der Pfad also mit "C:\Programme\Java\jre7" beginnen.
+
+Schritt 2)
+Nun kopieren Sie die Datei "rxtxSerial.dll" aus dem Ordner Treiber\Win32 in den Ordner "C:\Programme\Java\j2re-Version\bin". 
+
+Java 64-Bit-Version (Windows):
+==============================
+
+Die notwendigen Treiber finden Sie im Ordner Win64.
+
+Schritt 1)
+Im Ordner Treiber\Win64 finden Sie die Dateien RXTXcomm.jar und rxtxSerial.dll. Die Datei RXTXcomm.jar kopieren in den Ordner "C:\Programme\Java\j2re-Version\lib\ext". Der Platzhalter "j2re-Version" steht für die Java-Version, welche ihnen mit "java -version"
+angezeigt wird. Mit einer aktuellen Java7-Version sollte der Pfad also mit "C:\Programme\Java\jre7" beginnen.
+
+Schritt 2)
+Nun kopieren Sie die Datei "rxtxSerial.dll" aus dem Ordner Treiber\Win64 in den Ordner "C:\Programme\Java\j2re-Version\bin". 
+
+
+Linux:
+======
+
+Mit dem Befehl "java --version" lässt sich die momentan aktive Java VM ermitteln.
+Neben der Versionsnummer lässt sich dabei auch ermitteln, ob es sich um eine 64-Bit-Anwendung handelt. Je nach Linux-Distribution kann der Java-Pfad abweichen, in diesem Fall hilft die Online-Hilfe oder das Wiki des Herstellers weiter.
+
+Java 32-Bit-Version (Linux):
+============================
+
+Schritt 1)
+
+Im Ordner Treiber/Linux32 finden Sie die Dateien RXTXcomm.jar und librxtxSerial.so. Die Datei RXTXcomm.jar kopieren Sie in den Ordner "/lib/ext" ihrer aktiven Java-Version, also beispielsweise unter "/usr/java/jre-Version/lib/ext". Unter Linux können lässt sich 
+das Java-Verzeichnis auch mit dem Befehl "which java" ermitteln.
+
+Schritt 2)
+
+Die Datei librxtxSerial.so aus dem Ordner Treiber/Linux32 wird in den Ordner "/lib/i386" kopiert. Gegebenenfalls müssen Sie mit dem Befehl "sudo chmod a+x librxtxSerial.so" die Zugriffsrechte für alle Benutzter anpassen.
+
+Java 64-Bit-Version (Linux):
+============================
+
+Schritt 1)
+
+Im Ordner Treiber/Linux64 finden Sie die Dateien RXTXcomm.jar und librxtxSerial.so. Die Datei RXTXcomm.jar kopieren Sie in den Ordner "/lib/ext" ihrer aktiven Java-Version, also beispielsweise unter "/usr/java/jre-Version/lib/ext". Unter Linux können lässt sich 
+das Java-Verzeichnis auch mit dem Befehl "which java" ermitteln.
+
+Schritt 2)
+
+Die Datei librxtxSerial.so aus dem Ordner Treiber/Linux64 wird in den Ordner "/lib/i386" kopiert. Gegebenenfalls müssen Sie mit dem Befehl "sudo chmod a+x librxtxSerial.so" die Zugriffsrechte für alle Benutzter anpassen.
+
+
+Mac OS X:
+=========
+
+Öffnen Sie den Ordner Treiber/MacOSX und kopieren Sie die Dateien RXTXcomm.jar und librxtxSerial.jnilib in den Ordner /Library/Java/Extensions. Anschließend starten Sie ein Terminal-Fenster. Mit der Tastenkombination [Cmd]+[Leertaste] öffnen Sie dazu ein Spotlight-Fenster und geben dort Terminal ein. Mit dem Befehl "sudo sh ./privileges.sh" starten sie ein Skript, welches Sie nach ihrem Administrator-Passwort fragt und dann die notwendigen Rechte für den Treiber setzt. Anmerkung: Das Skript ist für OSX 10.5 angepasst. Alternative Installationen finden Sie auf der Webseite: http://jlog.org/rxtx-mac.html
+
+Die c't-Hacks-Redaktion wünscht Ihnen viel Spaß beim Ausprobieren!
+
+Diskussionsforum zum Artikel: http://www.heise.de/forum/forum-40863/
